@@ -12,13 +12,17 @@ import java.util.List;
 public class Student {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     private String name;
 
     private int age;
 
     private double feeBalance;
+    public Student() {
+    	
+    }
     public Student(String name,int age,double feeBalance){
     	this.name=name;
     	this.age=age;
